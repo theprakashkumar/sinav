@@ -1,0 +1,14 @@
+.button {
+    min-width: 50px;
+    padding: 10px;
+    margin: 10px;
+    background: white;
+}
+
+.button--wrong {
+    background: red;
+}
+
+.button--right {
+    background: green;
+}
