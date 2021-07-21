@@ -4,6 +4,8 @@ export type Data = {
     score: number;
     quiz: Quiz;
     dispatch: React.Dispatch<any>;
+    buttonDisabled: boolean;
+    toggleButton: Function;
 };
 
 export type State = {
