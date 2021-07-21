@@ -2,27 +2,25 @@ import "./Quiz.css";
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router";
 import { DataContext } from "../contexts/DataContext";
-import { Option } from "../data/quiz.types";
+import { Option } from "../types/QuizTypes";
 
 const Quiz = () => {
-    const { quizName, questions } = useContext(DataContext);
-    const [score, setScore] = useState(0);
+    const { score, quiz, dispatch } = useContext(DataContext);
     const [questionNumber, setQuestionNumber] = useState(0);
     const [buttonDisabled, setButtonDisabled] = useState(false);
     const [selectionId, setSelectionId] = useState("");
 
     const navigate = useNavigate();
 
-    // ! Will Be Moved to Reducer
-    const scoreKeeper = (curScore: number, option: Option): number => {
-        return option.isRight ? curScore + 1 : curScore;
-    };
-
     const handleClick = (selectedOption: Option, selectedId: string) => {
         setSelectionId(selectedId);
         setButtonDisabled(true);
-        const evaluatedScore = scoreKeeper(score, selectedOption);
-        setScore(evaluatedScore);
+        dispatch({
+            type: "CHECK_ANSWER",
+            payload: {
+                selectedOption: selectedOption,
+            },
+        });
         setTimeout(() => {
             setQuestionNumber((questionNumber) => questionNumber + 1);
             setSelectionId("");
@@ -36,10 +34,10 @@ const Quiz = () => {
                 <div className="quiz-container">
                     {`Your Current Score: ${score}`}
                     <div className="quiz-container__question">
-                        {questions[questionNumber].question}
+                        {quiz.questions[questionNumber].question}
                     </div>
                     <div className="quiz-container__button-container">
-                        {questions[questionNumber].options.map((item) => (
+                        {quiz.questions[questionNumber].options.map((item) => (
                             <button
                                 onClick={() => {
                                     handleClick(item, item.id);
@@ -49,7 +47,12 @@ const Quiz = () => {
                                     buttonDisabled &&
                                     item.isRight &&
                                     "button--right"
-                                } ${buttonDisabled && !item.isRight && selectionId === item.id && "button--wrong"}`}
+                                } ${
+                                    buttonDisabled &&
+                                    !item.isRight &&
+                                    selectionId === item.id &&
+                                    "button--wrong"
+                                }`}
                             >
                                 {item.text}
                             </button>

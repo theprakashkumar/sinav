@@ -1,4 +1,4 @@
-import { Quiz } from "./quiz.types";
+import { Quiz } from "../types/QuizTypes";
 const quizSum: Quiz = {
     quizName: "SUM",
     questions: [
