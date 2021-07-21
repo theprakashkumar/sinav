@@ -10,10 +10,20 @@ const reducer = (initialState: State, action: Action) => {
                 initialState.score,
                 action.payload.selectedOption
             );
-            console.log("Evaluated Score", evaluatedScore);
             return {
                 ...initialState,
-                score: initialState.score + evaluatedScore,
+                buttonDisabled: true,
+                score: evaluatedScore,
+            };
+        case "ENABLE_BUTTON":
+            return {
+                ...initialState,
+                buttonDisabled: false,
+            };
+        case "NEXT_QUESTION":
+            return {
+                ...initialState,
+                questionNumber: initialState.questionNumber + 1,
             };
     }
 };

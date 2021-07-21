@@ -9,19 +9,15 @@ export const DataContext = createContext<Data>({} as Data);
 const initialState = {
     score: 0,
     quiz: quizSum,
+    buttonDisabled: false,
+    questionNumber: 0,
 };
 
 export const DataProvider = ({ children }: any) => {
     const [state, dispatch] = useReducer(reducer, initialState);
-    const [buttonDisabled, setButtonDisabled] = useState(false);
 
-    const toggleButton = () => {
-        setButtonDisabled(buttonDisabled => !buttonDisabled);
-    };
     return (
-        <DataContext.Provider
-            value={{ ...state, dispatch, buttonDisabled, toggleButton }}
-        >
+        <DataContext.Provider value={{ ...state, dispatch }}>
             {children}
         </DataContext.Provider>
     );

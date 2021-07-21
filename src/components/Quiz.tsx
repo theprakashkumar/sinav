@@ -5,15 +5,15 @@ import { DataContext } from "../contexts/DataContext";
 import { Option } from "../types/QuizTypes";
 
 const Quiz = () => {
-    const { score, quiz, dispatch, buttonDisabled, toggleButton} = useContext(DataContext);
-    const [questionNumber, setQuestionNumber] = useState(0);
+    const { score, quiz, buttonDisabled, questionNumber, dispatch } =
+        useContext(DataContext);
     const [selectionId, setSelectionId] = useState("");
 
     const navigate = useNavigate();
 
     const handleClick = (selectedOption: Option, selectedId: string) => {
         setSelectionId(selectedId);
-        toggleButton();
+        console.log(selectedOption);
         dispatch({
             type: "CHECK_ANSWER",
             payload: {
@@ -21,9 +21,13 @@ const Quiz = () => {
             },
         });
         setTimeout(() => {
-            setQuestionNumber((questionNumber) => questionNumber + 1);
+            dispatch({
+                type: "NEXT_QUESTION",
+            });
             setSelectionId("");
-            toggleButton();
+            dispatch({
+                type: "ENABLE_BUTTON",
+            });
         }, 2000);
     };
 
