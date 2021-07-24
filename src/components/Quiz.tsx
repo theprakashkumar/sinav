@@ -11,13 +11,14 @@ const Quiz = () => {
 
     const navigate = useNavigate();
 
-    const handleClick = (selectedOption: Option, selectedId: string) => {
-        setSelectionId(selectedId);
-        console.log(selectedOption);
+    const handleClick = (selectedOption: Option, selectedItem: string) => {
+        setSelectionId(selectedItem);
+        console.log({ selectedItem });
         dispatch({
             type: "CHECK_ANSWER",
             payload: {
-                selectedOption: selectedOption,
+                selectedOption,
+                selectedId: selectedItem,
             },
         });
         setTimeout(() => {

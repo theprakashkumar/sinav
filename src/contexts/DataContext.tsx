@@ -11,6 +11,7 @@ const initialState = {
     quiz: quizSum,
     buttonDisabled: false,
     questionNumber: 0,
+    selectedAnswer: [],
 };
 
 export const DataProvider = ({ children }: any) => {

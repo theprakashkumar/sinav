@@ -5,6 +5,7 @@ export type Data = {
     quiz: Quiz;
     buttonDisabled: boolean;
     questionNumber: number;
+    selectedAnswer: string[];
     dispatch: React.Dispatch<any>;
 };
 
@@ -13,6 +14,7 @@ export type State = {
     quiz: Quiz;
     buttonDisabled: boolean;
     questionNumber: number;
+    selectedAnswer: string[];
 };
 
 export type Action =
@@ -21,6 +23,7 @@ export type Action =
           payload: {
               question: Question;
               selectedOption: Option;
+              selectedId: string;
           };
       }
     | {
