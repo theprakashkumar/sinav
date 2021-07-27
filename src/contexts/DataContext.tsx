@@ -8,6 +8,7 @@ export const DataContext = createContext<Data>({} as Data);
 
 const initialState = {
     score: 0,
+    allQuiz : [quizSum, quizProduct],
     quiz: null,
     buttonDisabled: false,
     questionNumber: 0,

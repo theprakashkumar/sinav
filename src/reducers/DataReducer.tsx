@@ -10,12 +10,12 @@ const reducer = (initialState: State, action: Action) => {
             if (action.payload.quizId === 1) {
                 return {
                     ...initialState,
-                    quiz: quizSum,
+                    quiz: initialState.allQuiz[0],
                 };
             }
             return {
                 ...initialState,
-                quiz: quizProduct,
+                quiz: initialState.allQuiz[1],
             };
         case "CHECK_ANSWER":
             const evaluatedScore = scoreKeeper(

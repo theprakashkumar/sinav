@@ -13,7 +13,7 @@ const Result = () => {
                     {question.options.map((option) => (
                         <div
                             className={`op ${option.isRight && "right"}  ${
-                                selectedAnswer[index] == option.id && !option.isRight && "wrong"
+                                selectedAnswer[index] === option.id && !option.isRight && "wrong"
                             }`}
                         >
                             {` ${index}. ${option.text}`}

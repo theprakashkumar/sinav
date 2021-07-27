@@ -2,6 +2,7 @@ import { Option, Question, Quiz } from "./QuizTypes";
 
 export type Data = {
     score: number;
+    allQuiz: Quiz[];
     quiz: null | Quiz;
     buttonDisabled: boolean;
     questionNumber: number;
@@ -11,6 +12,7 @@ export type Data = {
 
 export type State = {
     score: number;
+    allQuiz: Quiz[];
     quiz: null | Quiz;
     buttonDisabled: boolean;
     questionNumber: number;
