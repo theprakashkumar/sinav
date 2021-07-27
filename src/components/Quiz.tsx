@@ -38,10 +38,10 @@ const Quiz = () => {
                 <div className="quiz-container">
                     {`Your Current Score: ${score}`}
                     <div className="quiz-container__question">
-                        {quiz.questions[questionNumber].question}
+                        {quiz?.questions[questionNumber].question}
                     </div>
                     <div className="quiz-container__button-container">
-                        {quiz.questions[questionNumber].options.map((item) => (
+                        {quiz?.questions[questionNumber].options.map((item) => (
                             <button
                                 onClick={() => {
                                     handleClick(item, item.id);

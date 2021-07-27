@@ -2,7 +2,7 @@ import { Option, Question, Quiz } from "./QuizTypes";
 
 export type Data = {
     score: number;
-    quiz: Quiz;
+    quiz: null | Quiz;
     buttonDisabled: boolean;
     questionNumber: number;
     selectedAnswer: string[];
@@ -11,13 +11,19 @@ export type Data = {
 
 export type State = {
     score: number;
-    quiz: Quiz;
+    quiz: null | Quiz;
     buttonDisabled: boolean;
     questionNumber: number;
     selectedAnswer: string[];
 };
 
 export type Action =
+    | {
+          type: "INI_QUIZ";
+          payload: {
+              quizId: number;
+          };
+      }
     | {
           type: "CHECK_ANSWER";
           payload: {
