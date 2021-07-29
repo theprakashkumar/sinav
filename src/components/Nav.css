@@ -1,0 +1,12 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 3rem;
+}
+
+.nav__brand {
+    font-family: "Pacifico", cursive;
+    color: var(--main-text-color);
+    font-size: 2.5rem;
+}

@@ -24,13 +24,3 @@ export const DataProvider = ({ children }: any) => {
         </DataContext.Provider>
     );
 };
-
-// Data that need to sent from here:
-// Score
-// history of selected option
-//
-
-// Reducer
-// update score
-// store selected option
-//
