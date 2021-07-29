@@ -34,10 +34,10 @@ const Quiz = () => {
 
     return (
         <>
-            {questionNumber < 2 ? (
+            {questionNumber < 5 ? (
                 <div className="quiz-container">
                     <div className="quiz-container__status">
-                        <div>Question: {`${questionNumber+1}/2`}</div>
+                        <div>Question: {`${questionNumber+1}/${quiz?.questions.length}`}</div>
                         {`Score: ${score}`}
                     </div>
                     <div className="quiz-container__question">

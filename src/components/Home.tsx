@@ -17,7 +17,7 @@ const Home = () => {
                     })
                 }
             >
-                Quiz One
+                Coffee
             </Link>
             <Link
                 to="/quiz/2"
