@@ -37,8 +37,11 @@ const Quiz = () => {
             {questionNumber < 5 ? (
                 <div className="quiz-container">
                     <div className="quiz-container__status">
-                        <div>Question: {`${questionNumber+1}/${quiz?.questions.length}`}</div>
-                        {`Score: ${score}`}
+                        <div className="quiz-container__status__question">
+                            Question:{" "}
+                            {`${questionNumber + 1}/${quiz?.questions.length}`}
+                        </div>
+                        <div className="quiz-container__status__score">{`Score: ${score}`}</div>
                     </div>
                     <div className="quiz-container__question">
                         {quiz?.questions[questionNumber].question}
@@ -50,7 +53,7 @@ const Quiz = () => {
                                     handleClick(item, item.id);
                                 }}
                                 disabled={buttonDisabled}
-                                className={`button ${
+                                className={`quiz-container__button ${
                                     buttonDisabled &&
                                     item.isRight &&
                                     "button--right"

@@ -1,4 +1,3 @@
-import { quizProduct, quizSum } from "../data/quiz";
 import { State } from "../types/ContextTypes";
 import { Action } from "../types/ContextTypes";
 
