@@ -1,38 +1,67 @@
+import "./Home.css";
+import coffee from "../assets/images/coffee.jpg";
+import tea from "../assets/images/tea.jpg";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { DataContext } from "../contexts/DataContext";
 const Home = () => {
     const { dispatch } = useContext(DataContext);
     return (
-        <>
-            <div>Home</div>
-            <Link
-                to="/quiz/1"
-                onClick={() =>
-                    dispatch({
-                        type: "INI_QUIZ",
-                        payload: {
-                            quizId: 1,
-                        },
-                    })
-                }
-            >
-                Coffee
-            </Link>
-            <Link
-                to="/quiz/2"
-                onClick={() =>
-                    dispatch({
-                        type: "INI_QUIZ",
-                        payload: {
-                            quizId: 2,
-                        },
-                    })
-                }
-            >
-                Tea
-            </Link>
-        </>
+        <div className="home">
+            <div className="home__title">Let's See Which Side Are You?</div>
+            <div className="home__question-container">
+                <div className="home__question-container__side">
+                    <Link
+                        className="home__question-container__link"
+                        to="/quiz/1"
+                        onClick={() =>
+                            dispatch({
+                                type: "INI_QUIZ",
+                                payload: {
+                                    quizId: 1,
+                                },
+                            })
+                        }
+                    >
+                        <div className="home__question-container__description">
+                            <img
+                                className="home__question-container__description__image"
+                                src={coffee}
+                                alt=""
+                            />
+                            <div className="home__question-container__description__title">
+                                Coffee
+                            </div>
+                        </div>
+                    </Link>
+                </div>
+                <div className="home__question-container__side">
+                    <Link
+                        className="home__question-container__link"
+                        to="/quiz/2"
+                        onClick={() =>
+                            dispatch({
+                                type: "INI_QUIZ",
+                                payload: {
+                                    quizId: 2,
+                                },
+                            })
+                        }
+                    >
+                        <div className="home__question-container__description">
+                            <img
+                                className="home__question-container__description__image"
+                                src={tea}
+                                alt=""
+                            />
+                            <div className="home__question-container__description__title">
+                                Tea
+                            </div>
+                        </div>
+                    </Link>
+                </div>
+            </div>
+        </div>
     );
 };
 
