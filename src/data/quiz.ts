@@ -1,9 +1,10 @@
 import { Quiz } from "../types/QuizTypes";
-const quizSum: Quiz = {
-    quizName: "SUM",
+const quizCoffee: Quiz = {
+    quizName: "Coffee",
     questions: [
         {
-            question: "About how many espresso beans are required to make one espresso?",
+            question:
+                "About how many espresso beans are required to make one espresso?",
             options: [
                 {
                     id: "a",
@@ -28,7 +29,8 @@ const quizSum: Quiz = {
             ],
         },
         {
-            question: "How long does it take for a coffee tree to reach maturity?",
+            question:
+                "How long does it take for a coffee tree to reach maturity?",
             options: [
                 {
                     id: "a",
@@ -53,7 +55,8 @@ const quizSum: Quiz = {
             ],
         },
         {
-            question: "About what percentage of all coffee consumed is instant coffee?",
+            question:
+                "About what percentage of all coffee consumed is instant coffee?",
             options: [
                 {
                     id: "a",
@@ -78,7 +81,8 @@ const quizSum: Quiz = {
             ],
         },
         {
-            question: "What percentage of coffee drinkers prefer their coffee black?",
+            question:
+                "What percentage of coffee drinkers prefer their coffee black?",
             options: [
                 {
                     id: "a",
@@ -130,50 +134,136 @@ const quizSum: Quiz = {
     ],
 };
 
-const quizProduct: Quiz = {
-    quizName: "PRODUCT",
+const quizTea: Quiz = {
+    quizName: "Tea",
     questions: [
         {
-            question: "2 * 2",
+            question: "Where do people drink tea most?",
             options: [
                 {
                     id: "a",
-                    text: "22",
+                    text: "China",
                     isRight: false,
                 },
                 {
                     id: "b",
-                    text: "4",
-                    isRight: true,
+                    text: "India",
+                    isRight: false,
                 },
                 {
                     id: "c",
-                    text: "4",
+                    text: "Russia",
+                    isRight: false,
+                },
+                {
+                    id: "d",
+                    text: "Turkey",
+                    isRight: true,
+                },
+            ],
+        },
+        {
+            question: "When was the tea bag invented?",
+            options: [
+                {
+                    id: "a",
+                    text: "1956",
+                    isRight: false,
+                },
+                {
+                    id: "b",
+                    text: "1891",
+                    isRight: false,
+                },
+                {
+                    id: "c",
+                    text: "1904",
+                    isRight: true,
+                },
+                {
+                    id: "d",
+                    text: "2001",
                     isRight: false,
                 },
             ],
         },
         {
-            question: "1 * 1",
+            question:
+                "How much does 1 kg of the world's most expensive tea cost?",
             options: [
                 {
                     id: "a",
-                    text: "11",
+                    text: "$200 000",
                     isRight: false,
                 },
                 {
                     id: "b",
-                    text: "1",
-                    isRight: true,
+                    text: "$500 000",
+                    isRight: false,
                 },
                 {
                     id: "c",
-                    text: "0",
+                    text: "$1 000 000",
+                    isRight: true,
+                },
+                {
+                    id: "d",
+                    text: "$3 000 000",
                     isRight: false,
+                },
+            ],
+        },
+        {
+            question: "What tea is the most widespread in the world?",
+            options: [
+                {
+                    id: "a",
+                    text: "Black",
+                    isRight: true,
+                },
+                {
+                    id: "b",
+                    text: "White",
+                    isRight: false,
+                },
+                {
+                    id: "c",
+                    text: "Oolong",
+                    isRight: false,
+                },
+                {
+                    id: "d",
+                    text: "Green",
+                    isRight: false,
+                },
+            ],
+        },
+        {
+            question: "What day is celebrated as International Tea Day?",
+            options: [
+                {
+                    id: "a",
+                    text: "February 13",
+                    isRight: false,
+                },
+                {
+                    id: "b",
+                    text: "April 27",
+                    isRight: false,
+                },
+                {
+                    id: "c",
+                    text: "June 19",
+                    isRight: false,
+                },
+                {
+                    id: "d",
+                    text: "December 15",
+                    isRight: true,
                 },
             ],
         },
     ],
 };
 
-export { quizSum, quizProduct };
+export { quizCoffee, quizTea };

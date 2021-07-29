@@ -6,4 +6,6 @@ style option something link alerts
 
 Credits:
 
-Favicon & Question: https://espressocoffeeguide.com/
+* Favicon & Coffee Question: https://espressocoffeeguide.com/
+
+* Tea Question: https://quizterra.com/en/what-do-you-know-about-tea

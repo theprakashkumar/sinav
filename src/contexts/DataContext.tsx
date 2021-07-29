@@ -1,6 +1,6 @@
 import { Data } from "../types/ContextTypes";
 import { createContext } from "react";
-import { quizSum, quizProduct } from "../data/quiz";
+import { quizCoffee, quizTea } from "../data/quiz";
 import reducer from "../reducers/DataReducer";
 import { useReducer, useState } from "react";
 
@@ -8,7 +8,7 @@ export const DataContext = createContext<Data>({} as Data);
 
 const initialState = {
     score: 0,
-    allQuiz : [quizSum, quizProduct],
+    allQuiz : [quizCoffee, quizTea],
     quiz: null,
     buttonDisabled: false,
     questionNumber: 0,

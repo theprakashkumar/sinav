@@ -30,7 +30,7 @@ const Home = () => {
                     })
                 }
             >
-                Quiz Two
+                Tea
             </Link>
         </>
     );
