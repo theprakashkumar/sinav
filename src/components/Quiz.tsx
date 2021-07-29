@@ -36,7 +36,10 @@ const Quiz = () => {
         <>
             {questionNumber < 2 ? (
                 <div className="quiz-container">
-                    {`Your Current Score: ${score}`}
+                    <div className="quiz-container__status">
+                        <div>Question: {`${questionNumber+1}/2`}</div>
+                        {`Score: ${score}`}
+                    </div>
                     <div className="quiz-container__question">
                         {quiz?.questions[questionNumber].question}
                     </div>

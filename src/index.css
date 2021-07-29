@@ -1,6 +1,46 @@
-body {
+/* Variables */
+:root {
+    --main-background: #f8fafc;
+    --main-text-color: #0f172a;
+    --main-text-light-color: #94a3b8;
+    --success-dark: #34d399;
+    --success-light: #ecfdf5;
+    --warning-dark: #fb923c;
+    --warning-light: #fff7ed;
+    --error-dark: #f87171;
+    --error-light: #fef2f2;
+    --info-dark: #60a5fa;
+    --info-light: #eff6ff;
+    --input-outline: #d1d5db;
+}
+
+/* Basic Reset */
+*,
+*::after,
+*::before {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background: var(--input-outline);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    background: var(--main-background);
+}
+
+/* Typography */
+body {
     font-family: "Montserrat", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--main-text-color);
 }
