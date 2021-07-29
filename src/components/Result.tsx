@@ -5,24 +5,33 @@ const Result = () => {
     const { score, quiz, selectedAnswer } = useContext(DataContext);
     console.log(selectedAnswer);
     return (
-        <div className="Result">
-            <div>Your Final Score: {score}</div>
+        <div className="result-container">
+            <div className="result-container__result">Result</div>
+            <div className="result-container__score">
+                Your Final Score: {score}
+            </div>
             {quiz?.questions.map((question, index) => (
                 <>
-                    <p>{question.question}</p>
-                    {question.options.map((option) => (
-                        <div
-                            className={`op ${option.isRight && "right"}  ${
-                                selectedAnswer[index] === option.id && !option.isRight && "wrong"
-                            }`}
-                        >
-                            {` ${index}. ${option.text}`}
-                        </div>
-                    ))}
+                    <div className="result-container__question">
+                        {question.question}
+                    </div>
+                    <div className="result-container__option-container">
+                        {question.options.map((option) => (
+                            <div
+                                className={`result-container__option ${
+                                    option.isRight &&
+                                    "result-container__option--right"
+                                }  ${
+                                    selectedAnswer[index] === option.id &&
+                                    !option.isRight &&
+                                    "result-container__option--wrong"
+                                }`}
+                            >
+                                {option.text}
+                            </div>
+                        ))}
+                    </div>
                 </>
-            ))}
-            {selectedAnswer.map((item, index) => (
-                <p key={index}>{item}</p>
             ))}
         </div>
     );

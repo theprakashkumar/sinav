@@ -1,11 +1,46 @@
-
-.op {
-    background: white;
-}
-.right{
-    background: green;
+.result-container {
+    width: 90%;
+    max-width: 55rem;
+    margin: 2rem auto;
 }
 
-.wrong {
-    background: red;
+.result-container__result {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.result-container__score {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.result-container__question {
+    font-size: 2rem;
+    text-align: justify;
+    margin-top: 2rem;
+}
+
+.result-container__option-container {
+    margin-top: 2rem auto 0 auto;
+}
+
+.result-container__option {
+    font-family: "Montserrat", sans-serif;
+    color: var(--main-text-color);
+    width: 100%;
+    font-size: 1.7rem;
+    padding: 1.1rem;
+    margin-top: 1.5rem;
+    font-weight: 500;
+    background: #fff;
+    border: none;
+    box-shadow: 0px 0px 3px 1px var(--input-outline);
+    text-align: center;
+}
+.result-container__option--right {
+    background: var(--success-dark);
+}
+
+.result-container__option--wrong {
+    background: var(--error-dark);
 }
