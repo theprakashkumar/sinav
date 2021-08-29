@@ -32,6 +32,11 @@ const Quiz = () => {
         }, 2000);
     };
 
+    const questionExcided = () => {
+        dispatch({ type: "RESET" });
+        navigate("/result");
+    };
+
     return (
         <>
             {questionNumber < 5 ? (
@@ -70,7 +75,7 @@ const Quiz = () => {
                     </div>
                 </div>
             ) : (
-                navigate("/result")
+                questionExcided()
             )}
         </>
     );

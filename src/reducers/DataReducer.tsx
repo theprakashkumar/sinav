@@ -6,16 +6,10 @@ import scoreKeeper from "../utils/scoreKeeper";
 const reducer = (initialState: State, action: Action) => {
     switch (action.type) {
         case "INI_QUIZ":
-            if (action.payload.quizId === 1) {
-                return {
-                    ...initialState,
-                    quiz: initialState.allQuiz[0],
-                };
-            }
             return {
                 ...initialState,
-                quiz: initialState.allQuiz[1],
-            };
+                quiz: initialState.allQuiz[action.payload.quizId - 1]
+            }
         case "CHECK_ANSWER":
             const evaluatedScore = scoreKeeper(
                 initialState.score,
