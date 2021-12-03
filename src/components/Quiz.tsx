@@ -3,6 +3,7 @@ import { useState, useContext } from "react";
 import { useNavigate } from "react-router";
 import { DataContext } from "../contexts/DataContext";
 import { Option } from "../types/QuizTypes";
+import Result from "./Result";
 
 const Quiz = () => {
     const { score, quiz, buttonDisabled, questionNumber, dispatch } =
@@ -33,7 +34,6 @@ const Quiz = () => {
     };
 
     const questionExcided = () => {
-        dispatch({ type: "RESET" });
         navigate("/result");
     };
 

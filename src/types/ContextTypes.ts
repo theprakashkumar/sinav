@@ -39,4 +39,7 @@ export type Action =
       }
     | {
           type: "NEXT_QUESTION";
+      }
+    | {
+          type: "RESET";
       };

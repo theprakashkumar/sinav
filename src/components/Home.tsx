@@ -1,11 +1,17 @@
 import "./Home.css";
 import coffee from "../assets/images/coffee.jpg";
 import tea from "../assets/images/tea.jpg";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { DataContext } from "../contexts/DataContext";
 const Home = () => {
     const { dispatch } = useContext(DataContext);
+
+    useEffect(() => {
+        dispatch({
+            type: "RESET",
+        });
+    }, []);
     return (
         <div className="home">
             <div className="home__title">Let's See Which Side Are You?</div>

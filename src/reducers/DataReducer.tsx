@@ -8,8 +8,8 @@ const reducer = (initialState: State, action: Action) => {
         case "INI_QUIZ":
             return {
                 ...initialState,
-                quiz: initialState.allQuiz[action.payload.quizId - 1]
-            }
+                quiz: initialState.allQuiz[action.payload.quizId - 1],
+            };
         case "CHECK_ANSWER":
             const evaluatedScore = scoreKeeper(
                 initialState.score,
@@ -34,6 +34,15 @@ const reducer = (initialState: State, action: Action) => {
             return {
                 ...initialState,
                 questionNumber: initialState.questionNumber + 1,
+            };
+        case "RESET":
+            return {
+                ...initialState,
+                score: 0,
+                quiz: null,
+                buttonDisabled: false,
+                questionNumber: 0,
+                selectedAnswer: [],
             };
     }
 };
