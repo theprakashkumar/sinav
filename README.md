@@ -1,11 +1,11 @@
-# sinav
+# Sinav
 
-simple quiz app
+## Sinav is simple quiz app, made with React(Typescript).
 
-style option something link alerts
+Live Preview: https://sinemaindia.netlify.app/
 
 Credits:
 
-* Favicon & Coffee Question: https://espressocoffeeguide.com/
+-   Favicon & Coffee Question: https://espressocoffeeguide.com/
 
-* Tea Question: https://quizterra.com/en/what-do-you-know-about-tea
+-   Tea Question: https://quizterra.com/en/what-do-you-know-about-tea
