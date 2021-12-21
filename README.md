@@ -2,7 +2,7 @@
 
 ## Sinav is simple quiz app, made with React(Typescript).
 
-Live Preview: https://sinemaindia.netlify.app/
+Live Preview: https://sinavindia.netlify.app/
 
 Credits:
 
