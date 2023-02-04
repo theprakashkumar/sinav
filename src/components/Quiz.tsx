@@ -32,7 +32,7 @@ const Quiz = () => {
         }, 2000);
     };
 
-    const questionExcided = () => {
+    const questionExited = () => {
         navigate("/result");
     };
 
@@ -67,6 +67,7 @@ const Quiz = () => {
                                     selectionId === item.id &&
                                     "button--wrong"
                                 }`}
+                                key={item.text}
                             >
                                 {item.text}
                             </button>
@@ -74,7 +75,7 @@ const Quiz = () => {
                     </div>
                 </div>
             ) : (
-                questionExcided()
+                questionExited()
             )}
         </>
     );
