@@ -2,7 +2,7 @@ import { Data } from "../types/ContextTypes";
 import { createContext } from "react";
 import { quizCoffee, quizTea } from "../data/quiz";
 import reducer from "../reducers/DataReducer";
-import { useReducer } from "react";
+import { useReducer, useState } from "react";
 
 export const DataContext = createContext<Data>({} as Data);
 
