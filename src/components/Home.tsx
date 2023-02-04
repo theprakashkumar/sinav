@@ -1,8 +1,5 @@
 import "./Home.css";
-import coffee from "../assets/images/coffee.jpg";
-import tea from "../assets/images/tea.jpg";
 import { useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { DataContext } from "../contexts/DataContext";
 import CategoryCard from "./CategoryCard";
 const Home = () => {

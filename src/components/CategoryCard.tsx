@@ -22,7 +22,7 @@ const CategoryCard: FC<CategoryCardType> = ({
                     <img
                         className="category-card__description__image"
                         src={image}
-                        alt={`${category}-image`}
+                        alt={category}
                     />
                     <div className="category-card__description__title">
                         {category}
